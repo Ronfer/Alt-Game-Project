@@ -1,57 +1,478 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=261 format=2]
 
-[ext_resource path="res://Scenes/Player/PlayerMovement.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Player/PlayerPlaceholder.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Player/osb_up.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/Player/osb_down.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/Player/osb_left.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/Player/osb_right.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Player/PlayerController.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70000.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70001.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70002.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70003.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70004.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70005.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70006.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70007.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70008.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70009.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70010.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70011.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70012.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70013.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70014.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_70015.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10000.png" type="Texture" id=18]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10001.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10002.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10003.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10004.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10005.png" type="Texture" id=23]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10006.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10007.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10008.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10009.png" type="Texture" id=27]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10010.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10011.png" type="Texture" id=29]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10012.png" type="Texture" id=30]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10013.png" type="Texture" id=31]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10014.png" type="Texture" id=32]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_10015.png" type="Texture" id=33]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40000.png" type="Texture" id=34]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40001.png" type="Texture" id=35]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40002.png" type="Texture" id=36]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40003.png" type="Texture" id=37]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40004.png" type="Texture" id=38]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40005.png" type="Texture" id=39]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40006.png" type="Texture" id=40]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40007.png" type="Texture" id=41]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40008.png" type="Texture" id=42]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40009.png" type="Texture" id=43]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40010.png" type="Texture" id=44]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40011.png" type="Texture" id=45]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40012.png" type="Texture" id=46]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40013.png" type="Texture" id=47]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_40014.png" type="Texture" id=48]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00000.png" type="Texture" id=49]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00001.png" type="Texture" id=50]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00002.png" type="Texture" id=51]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00003.png" type="Texture" id=52]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00004.png" type="Texture" id=53]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00005.png" type="Texture" id=54]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00006.png" type="Texture" id=55]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00007.png" type="Texture" id=56]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00008.png" type="Texture" id=57]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00009.png" type="Texture" id=58]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00010.png" type="Texture" id=59]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00011.png" type="Texture" id=60]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00012.png" type="Texture" id=61]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00013.png" type="Texture" id=62]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_00014.png" type="Texture" id=63]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30000.png" type="Texture" id=64]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30001.png" type="Texture" id=65]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30002.png" type="Texture" id=66]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30003.png" type="Texture" id=67]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30004.png" type="Texture" id=68]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30005.png" type="Texture" id=69]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30006.png" type="Texture" id=70]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30007.png" type="Texture" id=71]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30008.png" type="Texture" id=72]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30009.png" type="Texture" id=73]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30010.png" type="Texture" id=74]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30011.png" type="Texture" id=75]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30012.png" type="Texture" id=76]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30013.png" type="Texture" id=77]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_30014.png" type="Texture" id=78]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60000.png" type="Texture" id=79]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60001.png" type="Texture" id=80]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60002.png" type="Texture" id=81]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60003.png" type="Texture" id=82]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60004.png" type="Texture" id=83]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60005.png" type="Texture" id=84]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60006.png" type="Texture" id=85]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60007.png" type="Texture" id=86]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60008.png" type="Texture" id=87]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60009.png" type="Texture" id=88]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60010.png" type="Texture" id=89]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60011.png" type="Texture" id=90]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60012.png" type="Texture" id=91]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60013.png" type="Texture" id=92]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_60014.png" type="Texture" id=93]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60000.png" type="Texture" id=94]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60001.png" type="Texture" id=95]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60002.png" type="Texture" id=96]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60003.png" type="Texture" id=97]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60004.png" type="Texture" id=98]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60005.png" type="Texture" id=99]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60006.png" type="Texture" id=100]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60007.png" type="Texture" id=101]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60008.png" type="Texture" id=102]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60009.png" type="Texture" id=103]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60010.png" type="Texture" id=104]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60011.png" type="Texture" id=105]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60012.png" type="Texture" id=106]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60013.png" type="Texture" id=107]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60014.png" type="Texture" id=108]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_60015.png" type="Texture" id=109]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20000.png" type="Texture" id=110]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20001.png" type="Texture" id=111]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20002.png" type="Texture" id=112]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20003.png" type="Texture" id=113]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20004.png" type="Texture" id=114]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20005.png" type="Texture" id=115]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20006.png" type="Texture" id=116]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20007.png" type="Texture" id=117]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20008.png" type="Texture" id=118]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20009.png" type="Texture" id=119]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20010.png" type="Texture" id=120]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20011.png" type="Texture" id=121]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20012.png" type="Texture" id=122]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20013.png" type="Texture" id=123]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20014.png" type="Texture" id=124]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_20015.png" type="Texture" id=125]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10000.png" type="Texture" id=126]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10001.png" type="Texture" id=127]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10002.png" type="Texture" id=128]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10003.png" type="Texture" id=129]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10004.png" type="Texture" id=130]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10005.png" type="Texture" id=131]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10006.png" type="Texture" id=132]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10007.png" type="Texture" id=133]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10008.png" type="Texture" id=134]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10009.png" type="Texture" id=135]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10010.png" type="Texture" id=136]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10011.png" type="Texture" id=137]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10012.png" type="Texture" id=138]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10013.png" type="Texture" id=139]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_10014.png" type="Texture" id=140]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20000.png" type="Texture" id=141]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20001.png" type="Texture" id=142]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20002.png" type="Texture" id=143]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20003.png" type="Texture" id=144]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20004.png" type="Texture" id=145]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20005.png" type="Texture" id=146]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20006.png" type="Texture" id=147]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20007.png" type="Texture" id=148]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20008.png" type="Texture" id=149]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20009.png" type="Texture" id=150]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20010.png" type="Texture" id=151]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20011.png" type="Texture" id=152]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20012.png" type="Texture" id=153]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20013.png" type="Texture" id=154]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_20014.png" type="Texture" id=155]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30000.png" type="Texture" id=156]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30001.png" type="Texture" id=157]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30002.png" type="Texture" id=158]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30003.png" type="Texture" id=159]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30004.png" type="Texture" id=160]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30005.png" type="Texture" id=161]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30006.png" type="Texture" id=162]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30007.png" type="Texture" id=163]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30008.png" type="Texture" id=164]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30009.png" type="Texture" id=165]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30010.png" type="Texture" id=166]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30011.png" type="Texture" id=167]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30012.png" type="Texture" id=168]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30013.png" type="Texture" id=169]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30014.png" type="Texture" id=170]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_30015.png" type="Texture" id=171]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50000.png" type="Texture" id=172]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50001.png" type="Texture" id=173]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50002.png" type="Texture" id=174]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50003.png" type="Texture" id=175]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50004.png" type="Texture" id=176]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50005.png" type="Texture" id=177]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50006.png" type="Texture" id=178]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50007.png" type="Texture" id=179]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50008.png" type="Texture" id=180]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50009.png" type="Texture" id=181]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50010.png" type="Texture" id=182]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50011.png" type="Texture" id=183]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50012.png" type="Texture" id=184]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50013.png" type="Texture" id=185]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50014.png" type="Texture" id=186]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_50015.png" type="Texture" id=187]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00000.png" type="Texture" id=188]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00001.png" type="Texture" id=189]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00002.png" type="Texture" id=190]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00003.png" type="Texture" id=191]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00004.png" type="Texture" id=192]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00005.png" type="Texture" id=193]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00006.png" type="Texture" id=194]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00007.png" type="Texture" id=195]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00008.png" type="Texture" id=196]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00009.png" type="Texture" id=197]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00010.png" type="Texture" id=198]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00011.png" type="Texture" id=199]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00012.png" type="Texture" id=200]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00013.png" type="Texture" id=201]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00014.png" type="Texture" id=202]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_00015.png" type="Texture" id=203]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50000.png" type="Texture" id=204]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50001.png" type="Texture" id=205]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50002.png" type="Texture" id=206]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50003.png" type="Texture" id=207]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50004.png" type="Texture" id=208]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50005.png" type="Texture" id=209]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50006.png" type="Texture" id=210]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50007.png" type="Texture" id=211]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50008.png" type="Texture" id=212]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50009.png" type="Texture" id=213]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50010.png" type="Texture" id=214]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50011.png" type="Texture" id=215]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50012.png" type="Texture" id=216]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50013.png" type="Texture" id=217]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_50014.png" type="Texture" id=218]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40000.png" type="Texture" id=219]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40001.png" type="Texture" id=220]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40002.png" type="Texture" id=221]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40003.png" type="Texture" id=222]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40004.png" type="Texture" id=223]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40005.png" type="Texture" id=224]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40006.png" type="Texture" id=225]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40007.png" type="Texture" id=226]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40008.png" type="Texture" id=227]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40009.png" type="Texture" id=228]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40010.png" type="Texture" id=229]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40011.png" type="Texture" id=230]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40012.png" type="Texture" id=231]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40013.png" type="Texture" id=232]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40014.png" type="Texture" id=233]
+[ext_resource path="res://Scenes/Player/Placeholders/idle/crusader_idle_40015.png" type="Texture" id=234]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70000.png" type="Texture" id=235]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70001.png" type="Texture" id=236]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70002.png" type="Texture" id=237]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70003.png" type="Texture" id=238]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70004.png" type="Texture" id=239]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70005.png" type="Texture" id=240]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70006.png" type="Texture" id=241]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70007.png" type="Texture" id=242]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70008.png" type="Texture" id=243]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70009.png" type="Texture" id=244]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70010.png" type="Texture" id=245]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70011.png" type="Texture" id=246]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70012.png" type="Texture" id=247]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70013.png" type="Texture" id=248]
+[ext_resource path="res://Scenes/Player/Placeholders/walk/crusader_walk_70014.png" type="Texture" id=249]
+[ext_resource path="res://Scenes/Player/shadedLight07.png" type="Texture" id=250]
+[ext_resource path="res://Scenes/Player/shadedLight03.png" type="Texture" id=251]
+[ext_resource path="res://Scenes/Player/shadedLight10.png" type="Texture" id=252]
+[ext_resource path="res://Scenes/Player/AButton.png" type="Texture" id=253]
+[ext_resource path="res://Scenes/Player/BButton.png" type="Texture" id=254]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "IdleLeftDown",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "IdleRightDown",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "WalkUp",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "WalkDown",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ) ],
+"loop": true,
+"name": "WalkRightUp",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ) ],
+"loop": true,
+"name": "WalkLeft",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ) ],
+"loop": true,
+"name": "IdleLeft",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ) ],
+"loop": true,
+"name": "IdleRight",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ) ],
+"loop": true,
+"name": "WalkDownRight",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ) ],
+"loop": true,
+"name": "WalkRight",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ) ],
+"loop": true,
+"name": "IdleRightUp",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 187 ) ],
+"loop": true,
+"name": "IdleLeftUp",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 188 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ) ],
+"loop": true,
+"name": "IdleDown",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 211 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 214 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 217 ), ExtResource( 218 ) ],
+"loop": true,
+"name": "WalkLeftUp",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 219 ), ExtResource( 220 ), ExtResource( 221 ), ExtResource( 222 ), ExtResource( 223 ), ExtResource( 224 ), ExtResource( 225 ), ExtResource( 226 ), ExtResource( 227 ), ExtResource( 228 ), ExtResource( 229 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 234 ) ],
+"loop": true,
+"name": "IdleUp",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 235 ), ExtResource( 236 ), ExtResource( 237 ), ExtResource( 238 ), ExtResource( 239 ), ExtResource( 240 ), ExtResource( 241 ), ExtResource( 242 ), ExtResource( 243 ), ExtResource( 244 ), ExtResource( 245 ), ExtResource( 246 ), ExtResource( 247 ), ExtResource( 248 ), ExtResource( 249 ) ],
+"loop": true,
+"name": "WalkLeftDown",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 904.998
+height = 2284.01
+
+[sub_resource type="CircleShape2D" id=3]
+
+[sub_resource type="CircleShape2D" id=4]
+
+[sub_resource type="CircleShape2D" id=5]
+
+[sub_resource type="CircleShape2D" id=6]
 
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 0.05, 0.05 )
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -3.94334, -36.924 )
-texture = ExtResource( 2 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 20 )
+scale = Vector2( 25, 25 )
+frames = SubResource( 1 )
+animation = "IdleRight"
+frame = 15
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -257.055, -0.898285, -342.17, 99.693, -380.859, 231.235, -357.646, 300.876, -315.088, 304.745, -318.957, 389.86, -276.399, 498.189, -218.366, 602.65, -210.628, 656.814, -249.317, 703.241, -303.481, 730.323, -229.972, 749.668, -106.168, 726.454, -106.168, 633.601, -133.25, 502.058, -63.6098, 494.32, -36.5274, 641.339, -63.6098, 738.061, -28.7897, 757.406, 83.4085, 753.537, 91.1462, 718.717, 60.195, 633.601, 83.4085, 474.976, 114.36, 401.467, 187.869, 358.909, 238.164, 254.449, 230.427, 138.382, 207.213, 107.431, 191.738, 22.3151, 129.835, -31.8495, 83.4085, -35.7184, 265.247, -147.916, 296.198, -171.13, 392.92, -213.688, 478.036, -318.148, 536.069, -418.739, 532.201, -496.117, 400.658, -461.297, 323.28, -407.133, 284.591, -596.709, 184, -724.382, -1.70746, -801.76, -98.4297, -813.367, -233.841, -774.678, -365.384, -677.955, -450.499, -577.364, -489.188, -445.822, -535.615, -438.084, -531.746, -376.181, -489.188, -294.935, -481.451, -202.081, -435.024, -120.834, -357.646, -55.0629 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -361 )
+shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-rotating = true
 current = true
+zoom = Vector2( 1.5, 1.5 )
+smoothing_enabled = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Controls" type="CanvasLayer" parent="."]
 
-[node name="Up" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2( 180, 650 )
+[node name="PlaceholderPad" type="Sprite" parent="Controls"]
+position = Vector2( 231.836, 831.792 )
+scale = Vector2( 2.2, 2.2 )
+texture = ExtResource( 250 )
+
+[node name="Up" type="TouchScreenButton" parent="Controls/PlaceholderPad"]
+position = Vector2( -0.276543, -60.4153 )
 scale = Vector2( 2, 2 )
-normal = ExtResource( 3 )
+shape = SubResource( 3 )
 passby_press = true
 action = "move_up"
-visibility_mode = 1
 
-[node name="Down" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2( 180, 850 )
+[node name="Down" type="TouchScreenButton" parent="Controls/PlaceholderPad"]
+position = Vector2( -0.243279, 63.9397 )
 scale = Vector2( 2, 2 )
-normal = ExtResource( 4 )
+shape = SubResource( 4 )
 passby_press = true
 action = "move_down"
-visibility_mode = 1
 
-[node name="Left" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2( 60, 750 )
+[node name="Left" type="TouchScreenButton" parent="Controls/PlaceholderPad"]
+position = Vector2( -61.7882, 1.52585 )
 scale = Vector2( 2, 2 )
-normal = ExtResource( 5 )
+shape = SubResource( 5 )
 passby_press = true
 action = "move_left"
-visibility_mode = 1
 
-[node name="Right" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2( 300, 750 )
+[node name="Right" type="TouchScreenButton" parent="Controls/PlaceholderPad"]
+position = Vector2( 62.4186, 1.44299 )
 scale = Vector2( 2, 2 )
-normal = ExtResource( 6 )
+shape = SubResource( 6 )
 passby_press = true
 action = "move_right"
-visibility_mode = 1
+
+[node name="Placeholder1" type="Sprite" parent="Controls/PlaceholderPad"]
+position = Vector2( 42.7541, -40.3387 )
+rotation = 0.785398
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+texture = ExtResource( 251 )
+
+[node name="UpRight" type="TouchScreenButton" parent="Controls/PlaceholderPad/Placeholder1"]
+position = Vector2( -0.680176, -0.249207 )
+rotation = -0.785398
+scale = Vector2( 5, 5 )
+shape = SubResource( 3 )
+passby_press = true
+action = "move_up_right"
+
+[node name="Placeholder2" type="Sprite" parent="Controls/PlaceholderPad"]
+position = Vector2( -45.4565, -41.4506 )
+rotation = -0.785398
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+texture = ExtResource( 251 )
+
+[node name="UpLeft" type="TouchScreenButton" parent="Controls/PlaceholderPad/Placeholder2"]
+position = Vector2( 1.14359, -0.653503 )
+rotation = 0.785398
+scale = Vector2( 5, 5 )
+shape = SubResource( 3 )
+passby_press = true
+action = "move_up_left"
+
+[node name="Placeholder3" type="Sprite" parent="Controls/PlaceholderPad"]
+position = Vector2( 41.9885, 46.6331 )
+rotation = -0.785398
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+texture = ExtResource( 252 )
+
+[node name="DownRight" type="TouchScreenButton" parent="Controls/PlaceholderPad/Placeholder3"]
+position = Vector2( -0.225159, 0.0513916 )
+rotation = 0.785398
+scale = Vector2( 5, 5 )
+shape = SubResource( 4 )
+passby_press = true
+action = "move_down_right"
+
+[node name="Placeholder4" type="Sprite" parent="Controls/PlaceholderPad"]
+position = Vector2( -45.476, 43.6108 )
+rotation = 0.785398
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+texture = ExtResource( 252 )
+
+[node name="DownLeft" type="TouchScreenButton" parent="Controls/PlaceholderPad/Placeholder4"]
+position = Vector2( -0.188171, 0.0953979 )
+rotation = -0.785398
+scale = Vector2( 5, 5 )
+shape = SubResource( 4 )
+passby_press = true
+action = "move_down_left"
+
+[node name="Action1" type="TouchScreenButton" parent="Controls"]
+position = Vector2( 1381.99, 778.182 )
+scale = Vector2( 3, 3 )
+normal = ExtResource( 253 )
+passby_press = true
+
+[node name="Action2" type="TouchScreenButton" parent="Controls"]
+position = Vector2( 1633.19, 568.161 )
+scale = Vector2( 3, 3 )
+normal = ExtResource( 254 )
+passby_press = true
