@@ -1,0 +1,117 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/GUI/NavigationButtons/NavigationButtons.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/GUI/Placeholders/house with shaded logo icon_648269.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/GUI/Placeholders/motion-control/MotionControl-Bold.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/GUI/Placeholders/profile-icon-png-890.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/GUI/Placeholders/village_27128.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/GUI/Placeholders/team-success.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+resource_name = "Placeholder"
+size = 50
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.16943
+margin_top = -3.87708
+margin_right = 5.16943
+margin_bottom = -3.87708
+script = ExtResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 450.0
+margin_top = 850.0
+margin_right = 1420.0
+margin_bottom = 1000.0
+
+[node name="House" type="Button" parent="HBoxContainer"]
+margin_right = 239.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Sprite" type="Sprite" parent="HBoxContainer/House"]
+position = Vector2( 110.877, 62.069 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="HBoxContainer/House"]
+margin_left = 57.287
+margin_top = 97.5634
+margin_right = 491.287
+margin_bottom = 248.563
+rect_pivot_offset = Vector2( 1562.71, 428.455 )
+custom_fonts/font = SubResource( 1 )
+text = "House
+"
+
+[node name="Profile" type="Button" parent="HBoxContainer"]
+margin_left = 243.0
+margin_right = 482.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Sprite" type="Sprite" parent="HBoxContainer/Profile"]
+position = Vector2( 110.877, 58.009 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/Profile"]
+margin_left = 57.287
+margin_top = 97.5634
+margin_right = 491.287
+margin_bottom = 248.563
+rect_pivot_offset = Vector2( 1562.71, 428.455 )
+custom_fonts/font = SubResource( 1 )
+text = "Profile
+"
+
+[node name="Village" type="Button" parent="HBoxContainer"]
+margin_left = 486.0
+margin_right = 725.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Sprite" type="Sprite" parent="HBoxContainer/Village"]
+position = Vector2( 117.679, 56.028 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="HBoxContainer/Village"]
+margin_left = 58.6474
+margin_top = 94.8427
+margin_right = 492.647
+margin_bottom = 245.843
+rect_pivot_offset = Vector2( 1562.71, 428.455 )
+custom_fonts/font = SubResource( 1 )
+text = "Village"
+
+[node name="Clanmenu" type="Button" parent="HBoxContainer"]
+margin_left = 729.0
+margin_right = 970.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Sprite" type="Sprite" parent="HBoxContainer/Clanmenu"]
+position = Vector2( 117.679, 52.958 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="HBoxContainer/Clanmenu"]
+margin_left = 37.0
+margin_top = 94.8427
+margin_right = 471.0
+margin_bottom = 245.843
+rect_pivot_offset = Vector2( 1562.71, 428.455 )
+custom_fonts/font = SubResource( 1 )
+text = "Clanmenu"
+[connection signal="pressed" from="HBoxContainer/House" to="." method="_on_House_pressed"]
+[connection signal="pressed" from="HBoxContainer/Profile" to="." method="_on_Profile_pressed"]
+[connection signal="pressed" from="HBoxContainer/Village" to="." method="_on_Village_pressed"]
+[connection signal="pressed" from="HBoxContainer/Clanmenu" to="." method="_on_Clanmenu_pressed"]
